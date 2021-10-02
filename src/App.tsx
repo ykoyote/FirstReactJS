@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import List from './components/List'
 import AddToList from './components/AddToList';
+import UseStateComponent from './components/UseStateComponent';
+import UseEffectComponent from './components/UseEffectComponent';
+import UseContextComponent from './components/UseContextComponent';
+import UseReducerComponent from './components/UseReducerComponent';
 
 export interface IState {
   people: {
@@ -29,8 +32,30 @@ function App() {
       <h1>ReactJS Practice</h1>
       <List people={people} />
       <AddToList people={people} setPeople={setPeople} />
+
+      <div>
+        <h1>useState</h1>
+        <UseStateComponent />
+      </div>
+
+      <div>
+        <h1>useEffect</h1>
+        <UseEffectComponent />
+      </div>
+
+      <div>
+        <h1>useContext</h1>
+        <UseContextComponent />
+      </div>
+
+      <div>
+        <h1>useReducer</h1>
+        <UseReducerComponent />
+      </div>
+
     </div>
   );
 }
+
 
 export default App;
